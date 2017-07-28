@@ -8,18 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+    // Add two esxtra protocols
+class ViewController: UIViewController, UIImagePickerControllerDelegate,
+UINavigationControllerDelegate {
 
+    // Display Image
+    @IBOutlet weak var imagePickerView: UIImageView!
+    
+    // Invoke Images
+    @IBAction func pickImage(_ sender: Any) {
+        let pickerController = UIImagePickerController()
+        present(pickerController, animated: true, completion: nil)
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
